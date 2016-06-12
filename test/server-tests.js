@@ -8,7 +8,7 @@ var server = require('../server/server')
 test('GET /people?view=table returns an html string with a <table>', function (t) {
   request(server)
     .get('/people')
-    .query('view', 'table') // /people?view=table
+    .query({view: 'table'}) // /people?view=table
     .expect(200)
     .end(function (err, res) {
       if (err) { return err }
