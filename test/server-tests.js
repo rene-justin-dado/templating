@@ -1,7 +1,6 @@
 var test = require('tape')
 var request = require('supertest')
 var cheerio = require('cheerio')
-var w3c = require('w3c-validate').createValidator()
 
 var server = require('../server/server')
 
