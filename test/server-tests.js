@@ -17,6 +17,7 @@ test('GET /people?view=table returns an html string with a <table>', function (t
       var $ = cheerio.load(res.text)
       // add an assertion to ensure the response has the correct content (e.g. number of rows)
 
+      t.equal()
       t.end()
     })
 })
