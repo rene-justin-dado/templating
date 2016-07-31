@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node-dev ./server/index.js",
+    "start": "node-dev ./practice.js",
     "test": "tape test/*.js | tap-spec"
   },
   "repository": {
@@ -28,7 +28,12 @@
     "tape": "^4.4.0"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "cheerio": "^0.20.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.2",
+    "handlebars": "^4.0.5",
+    "jquery": "^3.1.0"
   }
 }

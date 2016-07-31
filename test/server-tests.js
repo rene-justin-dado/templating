@@ -2,6 +2,7 @@ var test = require('tape')
 var request = require('supertest')
 var cheerio = require('cheerio')
 
+var renderTable = require('../lib/render-list.js')
 var server = require('../server/server')
 
 test('GET /people?view=table returns an html string with a <table>', function (t) {
@@ -16,6 +17,7 @@ test('GET /people?view=table returns an html string with a <table>', function (t
 
       var $ = cheerio.load(res.text)
       // add an assertion to ensure the response has the correct content (e.g. number of rows)
+      renderTable()
 
       t.equal()
       t.end()

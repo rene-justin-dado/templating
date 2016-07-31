@@ -1,5 +1,6 @@
 var test = require('tape')
 var renderTable = require('../lib/render-table')
+var renderList = require('../lib/render-list')
 
 var fakeData = [
   {name: 'Alice', age: 60},
@@ -12,11 +13,16 @@ test('it renders a table of items', function (t) {
 
   var actualHtmlString = renderTable(fakeData)
 
-  t.equal(actualHtmlString, expectedHtmlString, 'it produces the expected string')
+  t.equal(actualHtmlString, expectedHtmlString, 'it produces the expected table')
   t.end()
 })
 
 // renderList test
 test('it renders a list of items', function (t) {
-  // implement
+  var expectedHtmlString = '<ul><li>Alice, 60</li><li>Bob, 21</li><li>Charles, 36</li></ul>'
+
+  var actualHtmlString = renderList(fakeData)
+
+  t.equal(actualHtmlString, expectedHtmlString, 'it produces the expected list')
+  t.end()
 })
